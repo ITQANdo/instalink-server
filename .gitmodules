@@ -1,0 +1,3 @@
+[submodule "instalink"]
+	path = instalink
+	url = https://github.com/ItqanDo/instalink
