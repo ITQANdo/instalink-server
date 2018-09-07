@@ -1,0 +1,31 @@
+{
+  "name": "instalink-server",
+  "version": "1.0.0",
+  "description": "Server API to get Instagram image URL based on instalink lib",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItqanDo/instalink-server.git"
+  },
+  "keywords": [
+    "Server",
+    "API",
+    "Instagram",
+    "Download",
+    "URL",
+    "Image"
+  ],
+  "author": "ITQAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItqanDo/instalink-server/issues"
+  },
+  "homepage": "https://github.com/ItqanDo/instalink-server#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "puppeteer": "^1.8.0"
+  }
+}
