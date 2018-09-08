@@ -1,5 +1,5 @@
 const express = require('express');
-const instalink = require('./instalink/instalink');
+const instalink = require('./instalink');
 const app = express();
 const port = process.env.INSTALINK_PORT || 3300;
 
