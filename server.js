@@ -3,7 +3,16 @@ const instalink = require('./instalink');
 const app = express();
 const port = process.env.INSTALINK_PORT || 3300;
 
-app.listen(port);
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
+app.use(express.static(__dirname + '/public'));
+
+
+// index page
+app.get('/', function(req, res) {
+    res.render('pages/index');
+});
 
 app.get("/p/:id", (req, res, next) => {
   async function fetchImageInfo() {
@@ -19,4 +28,5 @@ app.get("/p/:id", (req, res, next) => {
 
 });
 
+app.listen(port);
 console.log(`We're running on port: ${port}`);
