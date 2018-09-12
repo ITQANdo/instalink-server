@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.INSTALINK_PORT || 3300;
 const fs = require('fs');
 const moment = require('moment');
-const logfile = 'instalink-log.txt';
+const logfile = 'instalink.log.txt';
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
