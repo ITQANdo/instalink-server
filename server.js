@@ -30,7 +30,7 @@ app.get("/p/:id", (req, res, next) => {
   fetchImageInfo().then((r) => {
     res.json(r);
     fs.appendFile(__dirname + '/public/' + logfile,
-    `\n${moment().format('YYYY-MM-DD:HH:mm:ss')} - ${ip} - https://www.instagram.com/p/${req.params.id} - RESTULT:${r.status}`,
+    `\n${moment().format('YYYY-MM-DD:HH:mm:ss')} - ${ip} - https://www.instagram.com/p/${req.params.id} - RESTULT:${r.STATUS}`,
      function (err) {
       if (err) throw err;
       console.log('Saved!');
