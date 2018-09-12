@@ -11,32 +11,61 @@
 
 <body>
   <div class="container">
-    <div class="title">Instalink server</div>
+    <div class="title"><a href="/">Instalink Server</a></div>
     <div class="subtitle">Try entering an Instagram post URL.</div>
     <form class="" action="" method="get">
       <input type="text" class="input" name="post_url" id="post_url" value="" placeholder="Enter IG post URL">
-      <input type="button" class="submit" name="form_submit" value="Get Info" onclick="fetchPost(this)">
+      <a href="javascript:fetchPost(this)" class="submit" name="form_submit" onclick="">
+        <div class="loading">
+          <!-- We make this div spin -->
+          <div class="spinner">
+            <!-- Mask of the quarter of circle -->
+            <div class="mask">
+              <!-- Inner masked circle -->
+              <div class="maskedCircle"></div>
+            </div>
+          </div>
+        </div>
+        <span>Get Post Info</span>
+      </a>
     </form>
 
     <div class="result">
       <div class="line">
-        <span class="t">Status</span>
+        <span class="tag-green">Status</span>
         <span class="r" id="postStatusHolder">Unknown</span>
       </div>
       <div class="line">
-        <span class="t">Name</span>
+        <span class="tag-green">Message</span>
+        <span class="r" id="postMessageHolder">Unknown</span>
+      </div>
+      <div class="line">
+        <span class="tag-green">Type</span>
+        <span class="r" id="postTypeHolder">Unknown</span>
+      </div>
+      <div class="line">
+        <span class="tag-green">Name</span>
         <span class="r" id="userIDholder">Unknown</span>
       </div>
       <div class="line">
-        <span class="t">Likes</span>
+        <span class="tag-green">URL(s)</span>
+        <span class="r" id="rawURLsholder">No URLs</span>
+      </div>
+      <div class="line">
+        <span class="tag-green">Likes</span>
         <span class="r" id="postLikesHolder">Unknown</span>
       </div>
       <div class="line">
-        <span class="t">URL</span>
-        <span class="r"><a href="#" id="imageURLholder" target="_blank">No URL</a></span>
+        <span class="tag-green">Video Likes</span>
+        <span class="r" id="postVideoLikesHolder">Unknown</span>
       </div>
       <div class="line">
-        <span class="t">Text</span>
+        <span class="tag-green">Video Views</span>
+        <span class="r" id="postVideoViewsHolder">Unknown</span>
+      </div>
+
+      <div class="line">
+        <span class="tag-green">Text</span>
         <span class="r" id="postDescHolder">Unknown</span>
       </div>
     </div>
