@@ -14,10 +14,34 @@
     <div class="title">Instalink server</div>
     <div class="subtitle">Try entering an Instagram post URL.</div>
     <form class="" action="" method="get">
-      <input type="text" name="post_url" value="" placeholder="Enter IG post URL">
-      <input type="submit" name="form_submit" value="Get Info">
+      <input type="text" class="input" name="post_url" id="post_url" value="" placeholder="Enter IG post URL">
+      <input type="button" class="submit" name="form_submit" value="Get Info" onclick="fetchPost(this)">
     </form>
+
+    <div class="result">
+      <div class="line">
+        <span class="t">Status</span>
+        <span class="r" id="postStatusHolder">Unknown</span>
+      </div>
+      <div class="line">
+        <span class="t">Name</span>
+        <span class="r" id="userIDholder">Unknown</span>
+      </div>
+      <div class="line">
+        <span class="t">Likes</span>
+        <span class="r" id="postLikesHolder">Unknown</span>
+      </div>
+      <div class="line">
+        <span class="t">URL</span>
+        <span class="r"><a href="#" id="imageURLholder" target="_blank">No URL</a></span>
+      </div>
+      <div class="line">
+        <span class="t">Text</span>
+        <span class="r" id="postDescHolder">Unknown</span>
+      </div>
+    </div>
   </div>
+  <script type="text/javascript" src="/js/main.js"></script>
 </body>
 
 </html>
