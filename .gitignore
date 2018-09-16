@@ -1,5 +1,6 @@
 # Logging file for downloads
 public/*.log.txt
+public/instalink-log.txt
 
 # General
 .DS_Store
